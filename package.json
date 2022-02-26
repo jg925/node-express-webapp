@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "start-dev": "DEBUG=app nodemon app.js",
+    "start-debug": "DEBUG=* nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jinny Gui",
@@ -13,6 +14,7 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "debug": "^4.3.3",
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
     "morgan": "^1.10.0"
   },
@@ -24,5 +26,11 @@
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1"
+  },
+  "nodemonConfig": {
+    "delay": 2500,
+    "env": {
+      "PORT": 4000
+    }
   }
 }
